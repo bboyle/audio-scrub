@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Audio Scrub test</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+	<main>
+		<audio src="media/dialog.mp3" loop preload="auto" controls></audio>
+		<div class="scrubber"></div>
+
+		<table>
+			<caption>Data</caption>
+			<thead>
+				<tr>
+					<th>Frame</th>
+					<th>Total</th>
+					<th>pointer.x</th>
+					<th>pointer.frame</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<output class="frame"></output>
+					</td>
+					<td>
+						<output class="total-frames"></output>
+					</td>
+					<td>
+						<output class="pointer-x"></output>
+					</td>
+					<td>
+						<output class="pointer-frame"></output>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</main>
+
+
+	<script src="audio-scrub.js"></script>
+</body>
+</html>
