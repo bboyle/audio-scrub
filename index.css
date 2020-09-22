@@ -20,7 +20,7 @@ audio {
 
 
 .scrubber {
-	--scrubber-height: 50px;
+	--scrubber-height: 100px;
 	--frame-width: calc(100% / var(--frames));
 	--frame-start: calc(var(--frame-width) * (var(--frame) - 1));
 	--frame-end: calc(var(--frame-width) * var(--frame));
@@ -46,6 +46,20 @@ audio {
 	touch-action: none;
 
 	position: relative;
+}
+
+
+.scrubber::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(media/waveform.svg) no-repeat;
+	background-size: 100% 100%;
+	pointer-events: none;
+	opacity: 0.33;
 }
 
 
